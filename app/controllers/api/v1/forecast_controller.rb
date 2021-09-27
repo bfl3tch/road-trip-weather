@@ -1,6 +1,6 @@
 class Api::V1::ForecastController < ApplicationController
   before_action :weather_determinator, only: [:index]
-rescue_from NoMethodError, with: :error_generator
+  rescue_from NoMethodError, with: :error_generator
 
   def index
     render json: ForecastSerializer.new(@weather) if @weather
