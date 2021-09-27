@@ -5,7 +5,7 @@ RSpec.describe BookService do
     describe '::get_books' do
       context 'happy path' do
         it 'gets books about a particular city', :vcr do
-          response = BookService.get_books('denver, co', '5')
+          response = BookService.get_books('denver, co')
           expect(response).to be_a(Hash)
         end
       end
