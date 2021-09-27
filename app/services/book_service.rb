@@ -3,7 +3,7 @@ class BookService
     Faraday.new(url: 'http://openlibrary.org')
   end
 
-  def self.get_books(subject)
+  def self.get_books(subject, quantity)
     response = connection.get('/search.json') do |req|
       req.params['q'] = "#{subject}"
   end
