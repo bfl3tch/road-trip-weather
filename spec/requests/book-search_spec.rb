@@ -35,5 +35,62 @@ RSpec.describe 'Book-Search API' do
         expect(@results_hash[:data][:attributes][:books][0].keys).to eq([:isbn, :title, :publisher])
       end
     end
+
+    context 'sad path' do
+      context 'missing quantity params' do
+        before(:each) do
+          get '/api/v1/book-search?location=denver,co'
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message for an invalid entry', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+
+      context 'negative quantity params' do
+        before(:each) do
+          get '/api/v1/book-search?location=denver,co&quantity=-1'
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message for an invalid entry', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+
+      context 'zero quantity params' do
+        before(:each) do
+          get '/api/v1/book-search?location=denver,co&quantity=0'
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message for an invalid entry', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+
+      context 'missing location params' do
+        before(:each) do
+          get '/api/v1/book-search?quantity=1'
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message for an invalid entry', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+
+      context 'empty location params' do
+        before(:each) do
+          get '/api/v1/book-search?location=&quantity=1'
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message for an invalid entry', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+    end
   end
 end
