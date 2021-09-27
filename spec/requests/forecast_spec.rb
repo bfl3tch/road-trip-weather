@@ -13,7 +13,7 @@ RSpec.describe 'Forecast API' do
         expect(@results_hash[:data][:type]).to eq('forecast')
       end
 
-      it 'has all the required data', :vcr do
+      it 'returns current, next 5 days, and next 8 hours of weather', :vcr do
         expect(@results_hash[:data][:attributes].keys).to eq([:current_weather, :daily_weather, :hourly_weather])
 
         expect(@results_hash[:data][:attributes][:current_weather]).to include(:datetime)
@@ -27,15 +27,17 @@ RSpec.describe 'Forecast API' do
         expect(@results_hash[:data][:attributes][:daily_weather].first).to include(:max_temp)
         expect(@results_hash[:data][:attributes][:daily_weather].first).to include(:conditions)
         expect(@results_hash[:data][:attributes][:daily_weather].first).to include(:icon)
+        expect(@results_hash[:data][:attributes][:daily_weather].size).to eq(5)
 
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to include(:time)
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to include(:temperature)
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to include(:conditions)
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to include(:icon)
+        expect(@results_hash[:data][:attributes][:hourly_weather].size).to eq(8)
 
       end
 
-      it 'has none of the unnecessary data or incorrect key names', :vcr do
+      it 'does not have unnecessary information from the weather API call', :vcr do
         expect(@results_hash[:data][:attributes][:current_weather]).to_not include(:pressure)
         expect(@results_hash[:data][:attributes][:current_weather]).to_not include(:dew_point)
         expect(@results_hash[:data][:attributes][:current_weather]).to_not include(:clouds)
