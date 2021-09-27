@@ -10,6 +10,7 @@ RSpec.describe 'Book-Search API' do
 
       it 'returns the forecast data for a specific location', :vcr do
         expect(response.status).to eq(200)
+        require "pry"; binding.pry
       end
 
       xit 'returns current, next 5 days, and next 8 hours of weather', :vcr do

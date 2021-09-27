@@ -1,7 +1,15 @@
-class BookSerializer
+class BooksSerializer
   include JSONAPI::Serializer
 
-  # attributes :current_weather, :daily_weather, :hourly_weather
+  attributes :total_books_found, :books
+
+  attribute :books do |book|
+    {
+      isbn: book[:isbn],
+      title: book[:title],
+      publisher: book[:publisher]
+    }
+  end
   #
   # attribute :current_weather do |forecast|
   #   forecast.current_weather[:datetime] = Time.at(forecast.current_weather[:dt]).to_datetime
