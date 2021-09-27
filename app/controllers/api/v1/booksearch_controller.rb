@@ -9,7 +9,7 @@ class Api::V1::BooksearchController < ApplicationController
   private
 
   def book_searcher
-    # ((params[:location] && !params[:location].nil?) && (params[:quantity] && params[:quantity].to_i > 0))
+    ((params[:location] && !params[:location].nil?) && (params[:quantity] && params[:quantity].to_i > 0))
       @books = BooksearchFacade.get_books(params[:location], params[:quantity])
   end
 

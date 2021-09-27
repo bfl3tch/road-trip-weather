@@ -1,14 +1,16 @@
 class BooksSerializer
   include JSONAPI::Serializer
 
-  attributes :total_books_found, :books
+  attributes :total_books_found, :books, :forecast
 
-  attribute :books do |book|
-    {
-      isbn: book[:isbn],
-      title: book[:title],
-      publisher: book[:publisher]
-    }
+  attribute :books do |results|
+    results.books.map do |book|
+      {
+        isbn: book[:isbn],
+        title: book[:title],
+        publisher: book[:publisher]
+      }
+    end
   end
   #
   # attribute :current_weather do |forecast|
