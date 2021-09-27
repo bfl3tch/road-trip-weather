@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Forecast do
   before(:each) do
     @hash = JSON.parse(File.read('./spec/fixtures/test_data/slim_hash.rb'), symbolize_names: true)
-
   end
   describe 'instantiation' do
     it 'creates a forecast object' do
