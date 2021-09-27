@@ -5,9 +5,9 @@ class BooksearchFacade
 
     lat = lat_long[:results].first[:locations].first[:latLng][:lat]
     long = lat_long[:results].first[:locations].first[:latLng][:lng]
-
+    destination = "#{query}"
     weather = ForecastService.get_forecast(lat, long)
     forecast = weather[:current]
-    BooksResult.new(response, quantity, forecast)
+    BooksResult.new(response, quantity, forecast, destination)
   end
 end

@@ -1,7 +1,7 @@
 class BooksSerializer
   include JSONAPI::Serializer
 
-  attributes :total_books_found, :books, :forecast
+  attributes :destination, :forecast, :total_books_found, :books
 
   attribute :books do |results|
     results.books.map do |book|
@@ -15,15 +15,8 @@ class BooksSerializer
 
   attribute :forecast do |result|
     {
-      temperature: result.forecast[:temp],
-      summary: result.forecast[:weather].first[:description]
+      summary: result.forecast[:weather].first[:description],
+      temperature: "#{result.forecast[:temp].to_i.round(1)} F"
     }
-    # require "pry"; binding.pry
   end
-  #   require "pry"; binding.pry
-  #   # {
-  #   #   temperature: forecast[:current][:temp]
-  #   #   summary: forecast[:current][:weather].first[:description]
-  #   # }
-  # end
 end
