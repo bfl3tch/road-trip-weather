@@ -10,13 +10,29 @@ RSpec.describe 'Book-Search API' do
 
       it 'returns the forecast data for a specific location', :vcr do
         expect(response.status).to eq(200)
-        require "pry"; binding.pry
+        expect(@results_hash.keys).to include(:data)
+        expect(@results_hash[:data].keys).to eq([:id, :type, :attributes])
       end
 
-      xit 'returns current, next 5 days, and next 8 hours of weather', :vcr do
+      it 'returns the destination from the search', :vcr do
+        expect(@results_hash[:data][:attributes].keys).to include(:destination)
       end
 
-      xit 'does not have unnecessary information from the weather API call', :vcr do
+      it 'returns the forecast for that location', :vcr do
+        expect(@results_hash[:data][:attributes].keys).to include(:forecast)
+        expect(@results_hash[:data][:attributes][:forecast].keys).to eq([:summary, :temperature])
+      end
+
+      it 'returns the total number of books that were found', :vcr do
+        expect(@results_hash[:data][:attributes].keys).to include(:total_books_found)
+      end
+
+      it 'returns the quantity of books requested', :vcr do
+        expect(@results_hash[:data][:attributes][:books].size).to eq(5)
+      end
+
+      it 'returns information about each of the books', :vcr do
+        expect(@results_hash[:data][:attributes][:books][0].keys).to eq([:isbn, :title, :publisher])
       end
     end
   end
