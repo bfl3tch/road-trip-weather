@@ -27,6 +27,7 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('OPEN_WEATHER_KEY') { ENV['weather_api_key'] }
   config.filter_sensitive_data('MAPQUEST_KEY') { ENV['mapquest_api_key'] }
+  config.filter_sensitive_data('UNSPLASH_KEY') { ENV['photo_api_key'] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
 end
