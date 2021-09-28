@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=MAPQUEST_KEY&location=kjdashfjkadsghjklasdghkjlasdfhgjkldsghlkjsdfghdgjklsfghld
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=MAPQUEST_KEY&location=
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 28 Sep 2021 01:48:10 GMT
+      - Tue, 28 Sep 2021 01:48:09 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '374'
+      - '382'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -33,23 +33,24 @@ http_interactions:
       Expires:
       - Mon, 20 Dec 1998 01:00:00 GMT
       Geocodetransactioncount:
-      - '1'
+      - '0'
       Last-Modified:
-      - Tue, 28 Sep 2021 01:48:10 GMT
+      - Tue, 28 Sep 2021 01:48:09 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=706023A36391F0EE132FF9940CEAD6D7; Path=/; HttpOnly
+      - JSESSIONID=6C2E2FE3FAAA20D25BE88B69725D119D; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
-      - '1.0'
+      - '0.0'
     body:
       encoding: UTF-8
-      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+      string: '{"info":{"statuscode":400,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"kjdashfjkadsghjklasdghkjlasdfhgjkldsghlkjsdfghdgjklsfghld"},"locations":[]}]}'
-  recorded_at: Tue, 28 Sep 2021 01:48:10 GMT
+        2021 MapQuest, Inc."},"messages":["Illegal argument from request: Insufficient
+        info for location"]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":""},"locations":[]}]}'
+  recorded_at: Tue, 28 Sep 2021 01:48:09 GMT
 recorded_with: VCR 6.0.0
