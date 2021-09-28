@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Forecast API' do
+RSpec.describe 'Forecast API', type: :request do
   describe 'index action' do
     context 'happy path' do
       before(:each) do
