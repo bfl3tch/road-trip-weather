@@ -57,5 +57,29 @@ RSpec.describe 'Forecast API' do
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to_not include(:wind_gust)
       end
     end
+
+    context 'sad path' do
+      context 'empty location params' do
+        before(:each) do
+          get '/api/v1/forecast?location='
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+
+      context 'missing location params' do
+        before(:each) do
+          get '/api/v1/forecast'
+          @results_hash = JSON.parse(response.body, symbolize_names: true)
+        end
+
+        it 'returns an error message', :vcr do
+          expect(@results_hash.keys).to eq([:error])
+        end
+      end
+    end
   end
 end
