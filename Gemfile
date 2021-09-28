@@ -33,6 +33,7 @@ gem 'json'
 gem 'jsonapi-serializer'
 gem 'factory_bot_rails'
 gem 'faker'
+gem 'jwt '
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
