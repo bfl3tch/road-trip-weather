@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Backgrounds API' do
+RSpec.describe 'Backgrounds API', type: :request do
   describe 'index action' do
     context 'happy path' do
       before(:each) do
