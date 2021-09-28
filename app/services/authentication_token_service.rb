@@ -1,8 +1,10 @@
 class AuthenticationTokenService
-  def self.call
-    hmac_secret = 'my$ecretK3y'
-    payload = {"test" => 'what'}
+  HMAC_SECRET = 'my$ecretK3y'
+  ALGORITHM_TYPE = 'HS256'
 
-    JWT.encode payload, hmac_secret, 'HS256'
+  def self.call(user_id)
+    payload = {user_id: user_id }
+
+    JWT.encode payload, HMAC_SECRET, ALGORITHM_TYPE
   end
 end
