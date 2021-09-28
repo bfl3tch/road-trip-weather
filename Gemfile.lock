@@ -56,6 +56,12 @@ GEM
       rexml
     crass (1.0.6)
     date (3.1.1)
+    devise (4.8.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.4.4)
     docile (1.4.0)
     erubi (1.10.0)
@@ -115,6 +121,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-arm64-darwin)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.2.3)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -153,6 +160,9 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rexml (3.2.5)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
@@ -181,10 +191,6 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.3)
-    spring (2.1.1)
-    spring-watcher-listen (2.0.1)
-      listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -197,6 +203,8 @@ GEM
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     vcr (6.0.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     webmock (3.14.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -213,6 +221,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   date
+  devise
   factory_bot_rails
   faker
   faraday
@@ -228,8 +237,6 @@ DEPENDENCIES
   rspec-rails (~> 4.0.1)
   shoulda-matchers
   simplecov
-  spring
-  spring-watcher-listen (~> 2.0.0)
   tzinfo-data
   vcr
   webmock
