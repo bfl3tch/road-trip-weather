@@ -18,6 +18,6 @@ class Api::V1::ForecastController < ApplicationController
   end
 
   def error_generator
-    render json: { error: 'Invalid Entry' }, status: :unprocessable_entity
+    render json: { error: 'Invalid Entry' }, status: :bad_request
   end
 end

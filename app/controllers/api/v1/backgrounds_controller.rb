@@ -19,6 +19,6 @@ class Api::V1::BackgroundsController < ApplicationController
   end
 
   def error_generator
-    render json: {error: { error_message: 'Invalid Entry' } }
+    render json: {error: { error_message: 'Invalid Entry' }}, status: :bad_request
   end
 end
