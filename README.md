@@ -1,10 +1,15 @@
-# Road Trip Weather
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Forks][forks-shield]][forks-url]
 ![Version][version-badge]
+
+# <a href="https://road-trip-weather-api.herokuapp.com/api/v1/forecast?location=kennebunk">Road Trip Weather</a>
+###### ^example endpoint^
+
+
+##### A ReSTful, JSON 1.0 compliant API to retrieve forecast and images by location, and make authenticated requests for a road trip's weather forecast
+
 
 
 
