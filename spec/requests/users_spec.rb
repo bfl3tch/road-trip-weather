@@ -27,6 +27,7 @@ RSpec.describe 'Users API' do
         result = JSON.parse(response.body, symbolize_names: true)
 
         expect(response.status).to eq(422)
+        expect(result.keys).to_not include(:data)
         expect(result[:error]).to eq("Password confirmation doesn't match Password.")
       end
 
@@ -39,6 +40,7 @@ RSpec.describe 'Users API' do
         result = JSON.parse(response.body, symbolize_names: true)
 
         expect(response.status).to eq(422)
+        expect(result.keys).to_not include(:data)
         expect(result[:error]).to eq("Email has already been taken.")
       end
 
@@ -47,6 +49,7 @@ RSpec.describe 'Users API' do
 
         result = JSON.parse(response.body, symbolize_names: true)
 
+        expect(result.keys).to_not include(:data)
         expect(result[:error]).to eq("Password can't be blank.")
       end
 
@@ -55,6 +58,7 @@ RSpec.describe 'Users API' do
 
         result = JSON.parse(response.body, symbolize_names: true)
 
+        expect(result.keys).to_not include(:data)
         expect(response.status).to eq(422)
         expect(result[:error]).to eq("Password confirmation can't be blank.")
       end
@@ -64,6 +68,7 @@ RSpec.describe 'Users API' do
 
         result = JSON.parse(response.body, symbolize_names: true)
 
+        expect(result.keys).to_not include(:data)
         expect(response.status).to eq(422)
         expect(result[:error]).to eq("Email can't be blank.")
       end
@@ -73,6 +78,7 @@ RSpec.describe 'Users API' do
 
         result = JSON.parse(response.body, symbolize_names: true)
 
+        expect(result.keys).to_not include(:data)
         expect(response.status).to eq(422)
         expect(result[:error]).to eq("Email is invalid.")
       end

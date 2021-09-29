@@ -37,6 +37,7 @@ RSpec.describe "Sessions API" do
 
         body = JSON.parse(response.body, symbolize_names: true)
 
+        expect(body.keys).to_not include(:data)
         expect(body[:error]).to eq("Unable to log in. Please try again.")
       end
 
@@ -48,6 +49,7 @@ RSpec.describe "Sessions API" do
 
         body = JSON.parse(response.body, symbolize_names: true)
 
+        expect(body.keys).to_not include(:data)
         expect(body[:error]).to eq("Unable to log in. Please try again.")
       end
 
@@ -57,6 +59,8 @@ RSpec.describe "Sessions API" do
         }
 
         body = JSON.parse(response.body, symbolize_names: true)
+
+        expect(body.keys).to_not include(:data)
         expect(body[:error]).to eq("Unable to log in. Please try again.")
       end
     end
