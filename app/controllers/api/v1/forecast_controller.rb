@@ -9,10 +9,8 @@ class Api::V1::ForecastController < ApplicationController
   private
 
   def weather_determinator
-    # if (params[:location] && !params[:location].nil?)
-      ForecastFacade.lat_long(params[:location])
-      @weather = ForecastFacade.weather_getter
-    # end
+    ForecastFacade.lat_long(params[:location])
+    @weather = ForecastFacade.weather_getter
   end
 
   def error_generator
