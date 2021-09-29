@@ -5,7 +5,6 @@ class RoadTripFacade
     directions = get_directions(origin, destination)
     @travel_time = driving_time(directions)
     weather = arrival_weather(forecast)
-
     input_hash = {
       start_city: "#{origin}",
       end_city: "#{destination}",
