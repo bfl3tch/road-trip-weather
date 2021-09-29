@@ -10,18 +10,24 @@
 
 ## Table of Contents
 
+- [Contributors](#contributors)
 - [Overview](#overview)
 - [Tools Utilized](#framework)
-- [Contributors](#contributors)
 - [Project Configurations](#setup)
 - [Exposed Endpoints](#endpoints)
+
+### <ins>Contributors</ins>
+
+👤  **Brian Fletcher**
+- Github: [Brian Fletcher](https://github.com/bfl3tch)
+- LinkedIn: [Brian Fletcher](https://www.linkedin.com/in/bfl3tch/)
 
 
 ------
 
 ### <ins>Overview</ins>
 
-[SweaterWeather](https://backend.turing.edu/module3/projects/sweater_weather/) is a 5 day, 1 person project, during Mod 3 of 4 for Turing School's Back End Engineering Program.
+[Road Trip Weather](https://backend.turing.edu/module3/projects/sweater_weather/) is a 5 day, 1 person project, during Mod 3 of 4 for Turing School's Back End Engineering Program.
 
 The challenge was to build a fully functional [JSON API 1.0 spec](https://jsonapi.org/)-compliant REST API that aggregates data from multiple third party API endpoints that require authentication, and renders responses back to authenticated users making requests from a separate front end web application framework.
 
@@ -78,12 +84,6 @@ Learning goals and areas of focus consisted of:
   <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
   <img src="https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white" />  
 </p>
-
-### <ins>Contributors</ins>
-
-👤  **Brian Fletcher**
-- Github: [Brian Fletcher](https://github.com/bfl3tch)
-- LinkedIn: [Brian Fletcher](https://www.linkedin.com/in/bfl3tch/)
 
 
 ## <ins>Setup</ins>
