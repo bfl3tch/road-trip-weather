@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Client-ID qr_-aiOwhlFDquFudPx5PQScdNtxtDLWieezTArUwvg
+      - UNSPLASH_KEY
       User-Agent:
       - Faraday v1.8.0
       Accept-Encoding:
@@ -61,21 +61,21 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 28 Sep 2021 10:50:31 GMT
+      - Wed, 29 Sep 2021 01:32:21 GMT
       Age:
-      - '38264'
+      - '7'
       X-Served-By:
-      - cache-dca17758-DCA, cache-lga21980-LGA
+      - cache-dca17758-DCA, cache-lga21975-LGA
       X-Cache:
       - HIT, HIT
       X-Cache-Hits:
       - 1, 1
       X-Timer:
-      - S1632826231.322342,VS0,VE1
+      - S1632879142.512211,VS0,VE1
       Vary:
       - Accept-Encoding, Origin,Authorization,client-geo-region
     body:
       encoding: ASCII-8BIT
       string: '{"total":0,"total_pages":0,"results":[]}'
-  recorded_at: Tue, 28 Sep 2021 10:50:31 GMT
+  recorded_at: Wed, 29 Sep 2021 01:32:21 GMT
 recorded_with: VCR 6.0.0
