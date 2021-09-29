@@ -60,6 +60,11 @@ Learning goals and areas of focus consisted of:
   <img src="https://img.shields.io/badge/ActiveRecord-CC0000.svg?&style=flaste&logo=rubyonrails&logoColor=white" />
 </p>
 
+#### Deployment
+<p>
+  <a href="https://road-trip-weather-api.herokuapp.com/api/v1/forecast?location=kennebunk"><img src="https://camo.githubusercontent.com/a66ad9038e33a7cf9c070c9bd0308e54ccb33b11842ebbeaeb49c2950c7da716/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4865726f6b752d3433303039382e7376673f267374796c653d666c61737465266c6f676f3d6865726f6b75266c6f676f436f6c6f723d7768697465" /></a>
+<p>
+
 #### Tools
 <p>
   <img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />  
@@ -171,8 +176,13 @@ This project requires Ruby 2.7.2 and Rails 5.2.6.
 
 ## Endpoints
 
+The `base path` of each endpoint in <strong><u>production</u></strong> is: 
 
-The `base path` of each endpoint is:
+```
+https://road-trip-weather-api.herokuapp.com/
+```
+
+The `base path` of each endpoint in <strong><u>development/testing</u></strong> is:
 
 ```
 http://localhost:3000/api/v1
