@@ -21,13 +21,7 @@ class RoadTripSerializer
   attribute :travel_time do |travel|
     if travel.travel_time.length > 0
       time = JSON.parse(travel.travel_time)
-      if time.length == 3
         "#{time.first} hours, #{time.second} minutes"
-      elsif time.length == 2
-        "#{time.first} minutes"
-      elsif time.length == 1
-        "#{time.first} seconds"
-      end
     else
       "impossible route"
     end

@@ -3,10 +3,14 @@ class Api::V1::ForecastController < ApplicationController
   rescue_from NoMethodError, with: :error_generator
 
   def index
-    render json: ForecastSerializer.new(@weather) if @weather
+    @weather ? render_response : error_generator
   end
 
   private
+
+  def render_response
+    render json: ForecastSerializer.new(@weather)
+  end
 
   def weather_determinator
     ForecastFacade.lat_long(params[:location])
@@ -14,6 +18,6 @@ class Api::V1::ForecastController < ApplicationController
   end
 
   def error_generator
-    render json: {error: { error_message: 'Invalid Entry' } }
+    render json: { error: 'Invalid Entry' }, status: :unprocessable_entity
   end
 end

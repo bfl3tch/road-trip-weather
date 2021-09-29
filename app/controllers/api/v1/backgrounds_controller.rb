@@ -3,13 +3,14 @@ class Api::V1::BackgroundsController < ApplicationController
   rescue_from NoMethodError, with: :error_generator
 
   def index
-    render json: BackgroundsSerializer.new(@backgrounds) if @backgrounds
-    if @backgrounds.nil?
-      error_generator
-    end
+    @backgrounds ? render_response : error_generator
   end
 
   private
+
+  def render_response
+    render json: BackgroundsSerializer.new(@backgrounds)
+  end
 
   def backgrounds_determinator
     if (params[:location])

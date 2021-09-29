@@ -34,7 +34,6 @@ RSpec.describe 'Forecast API' do
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to include(:conditions)
         expect(@results_hash[:data][:attributes][:hourly_weather].first).to include(:icon)
         expect(@results_hash[:data][:attributes][:hourly_weather].size).to eq(8)
-
       end
 
       it 'does not have unnecessary information from the weather API call', :vcr do

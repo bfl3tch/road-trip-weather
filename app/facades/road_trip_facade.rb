@@ -21,42 +21,14 @@ class RoadTripFacade
   end
 
   def self.get_directions(origin, destination)
-    directions = DirectionsService.get_directions(origin, destination)[:route].without(:legs)
-  end
-  def self.set_lat_long(destination)
-    ForecastFacade.lat_long(destination)
+    directions = DirectionsService.get_directions(origin, destination)[:route]
+                                  .without(:legs)
   end
 
-  def self.travel_hours
-    @travel_time.first.to_i
-  end
-
-  def self.third_day
-    travel_hours - 48 <= 24
-  end
-
-  def self.fourth_day
-    ((travel_hours - 48 > 24) && (travel_hours - 48 <= 48))
-  end
-
-  def self.fifth_day
-    ((travel_hours - 48 > 48) && (travel_hours - 48 <= 72))
-  end
-
-  def self.long_trip
-    @travel_time && @travel_time.length == 3 && travel_hours > 48
-  end
-
-  def self.short_trip
-    @travel_time && @travel_time.length == 3 && travel_hours <= 48
-  end
-
-  def self.shorter_trip
-    @travel_time && @travel_time.length == 2
-  end
-
-  def self.shortest_trip
-    @travel_time && @travel_time.length == 1
+  def self.driving_time(directions)
+    if directions[:routeError][:errorCode] == (-400)
+      directions[:formattedTime].split(':')
+    end
   end
 
   def self.arrival_weather(forecast)
@@ -72,17 +44,38 @@ class RoadTripFacade
       else
         nil
       end
-    elsif shorter_trip
-      forecast.hourly_weather[1]
-    elsif shortest_trip
-      forecast.hourly_weather[0]
-      nil
     end
   end
 
-  def self.driving_time(directions)
-    if directions[:routeError][:errorCode] == (-400)
-      directions[:formattedTime].split(':')
-    end
+  def self.set_lat_long(destination)
+    ForecastFacade.lat_long(destination)
+  end
+
+  def self.travel_hours
+    @travel_time.first.to_i
+  end
+
+  def self.valid_travel_time
+    @travel_time && @travel_time.length == 3
+  end
+
+  def self.third_day
+    travel_hours - 48 <= 24
+  end
+
+  def self.fourth_day
+    ((travel_hours - 48 > 24) && (travel_hours - 48 <= 48))
+  end
+
+  def self.fifth_day
+    ((travel_hours - 48 > 48) && (travel_hours - 48 <= 72))
+  end
+
+  def self.long_trip
+    valid_travel_time && travel_hours > 48
+  end
+
+  def self.short_trip
+    valid_travel_time && travel_hours <= 48
   end
 end

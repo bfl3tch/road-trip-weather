@@ -1,11 +1,13 @@
 class Api::V1::RoadTripController < ApplicationController
   before_action :found_user, only: [:create]
+
   def create
     if found_user
-      if trip_params[:origin] && trip_params[:destination]
+      if valid_trip_search
         generate_response(trip_params[:origin], trip_params[:destination])
       else
-        generate_error('Must have both origin and destination query params', :unprocessable_entity)
+        generate_error('Must have both origin and destination query params',
+                      :unprocessable_entity)
       end
     else
       generate_error('Invalid API key')
@@ -16,6 +18,10 @@ class Api::V1::RoadTripController < ApplicationController
 
   def found_user
     User.find_by(api_key: params[:api_key]) if params[:api_key]
+  end
+
+  def valid_trip_search
+    trip_params[:origin] && trip_params[:destination]
   end
 
   def generate_response(origin, destination)
