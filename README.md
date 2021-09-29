@@ -16,12 +16,13 @@
 - [Project Configurations](#setup)
 - [Exposed Endpoints](#endpoints)
 
+------
+
 ### <ins>Contributors</ins>
 
 👤  **Brian Fletcher**
 - Github: [Brian Fletcher](https://github.com/bfl3tch)
 - LinkedIn: [Brian Fletcher](https://www.linkedin.com/in/bfl3tch/)
-
 
 ------
 
