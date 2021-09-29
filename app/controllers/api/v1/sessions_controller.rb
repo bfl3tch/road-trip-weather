@@ -1,15 +1,26 @@
 class Api::V1::SessionsController < ApplicationController
   def create
-    user = User.find_by(email: user_params[:email])
-    if user && user.authenticate(user_params[:password])
-      render json: UsersSerializer.new(user), status: 201
-    else
-      render json: { error: "Unable to log in. Please try again." }, status: 401
-    end
+    @user = User.find_by(email: user_params[:email])
+
+    valid_user ? render_response : generate_error
   end
 
   private
-    def user_params
-      params.permit(:email, :password)
-    end
+
+  def valid_user
+    @user && @user.authenticate(user_params[:password])
+  end
+
+  def render_response
+    render json: UsersSerializer.new(@user), status: :created
+  end
+
+  def user_params
+    params.permit(:email, :password)
+  end
+
+  def generate_error(status = :unauthorized)
+    render json: { error: "Unable to log in. Please try again." },
+                   status: status
+  end
 end
