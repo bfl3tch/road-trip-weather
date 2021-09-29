@@ -5,8 +5,4 @@ class User < ApplicationRecord
   validates_confirmation_of :password
   validates :password_confirmation, presence: true, on: :create
   validates :api_key, uniqueness: true, presence: true, on: :update
-
-  # def self.valid_api_key?(api_key)
-  #   find_by(api_key: api_key)
-  # end
 end
