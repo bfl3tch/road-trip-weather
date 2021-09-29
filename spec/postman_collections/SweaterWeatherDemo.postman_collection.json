@@ -1,0 +1,3790 @@
+{
+	"info": {
+		"_postman_id": "799c4a05-aa35-4a89-b5a7-088b4704e7d8",
+		"name": "Sweater Weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Application Landing Page",
+			"item": [
+				{
+					"name": "1a. Retrieve weather for a city",
+					"item": [
+						{
+							"name": "Happy Path",
+							"item": [
+								{
+									"name": "Forecast in Denver",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/forecast?location=denver,co",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"forecast"
+											],
+											"query": [
+												{
+													"key": "location",
+													"value": "denver,co"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forecast in Denver",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/forecast?location=denver,co",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"forecast"
+													],
+													"query": [
+														{
+															"key": "location",
+															"value": "denver,co"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"9fe6ceab00b828872d93e1609370ed70\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "d9c12795-3a95-4c00-8a21-ab0d005cfe46"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.827631"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"forecast\",\n        \"attributes\": {\n            \"current_weather\": {\n                \"sunrise\": \"2021-09-28T08:53:27.000-04:00\",\n                \"sunset\": \"2021-09-28T20:47:23.000-04:00\",\n                \"feels_like\": 58.6,\n                \"humidity\": 48,\n                \"uvi\": 0,\n                \"visibility\": 10000,\n                \"datetime\": \"2021-09-29T00:33:53.000-04:00\",\n                \"temperature\": 60.58,\n                \"conditions\": \"broken clouds\",\n                \"icon\": \"04n\"\n            },\n            \"daily_weather\": [\n                {\n                    \"date\": \"2021-09-28\",\n                    \"sunrise\": \"2021-09-28T08:53:27.000-04:00\",\n                    \"sunset\": \"2021-09-28T20:47:23.000-04:00\",\n                    \"max_temp\": 81,\n                    \"min_temp\": 60.58,\n                    \"conditions\": \"light rain\",\n                    \"icon\": \"10d\"\n                },\n                {\n                    \"date\": \"2021-09-29\",\n                    \"sunrise\": \"2021-09-29T08:54:24.000-04:00\",\n                    \"sunset\": \"2021-09-29T20:45:45.000-04:00\",\n                    \"max_temp\": 72.82,\n                    \"min_temp\": 53.11,\n                    \"conditions\": \"heavy intensity rain\",\n                    \"icon\": \"10d\"\n                },\n                {\n                    \"date\": \"2021-09-30\",\n                    \"sunrise\": \"2021-09-30T08:55:21.000-04:00\",\n                    \"sunset\": \"2021-09-30T20:44:07.000-04:00\",\n                    \"max_temp\": 60.22,\n                    \"min_temp\": 50.94,\n                    \"conditions\": \"light rain\",\n                    \"icon\": \"10d\"\n                },\n                {\n                    \"date\": \"2021-10-01\",\n                    \"sunrise\": \"2021-10-01T08:56:19.000-04:00\",\n                    \"sunset\": \"2021-10-01T20:42:29.000-04:00\",\n                    \"max_temp\": 69.44,\n                    \"min_temp\": 54.21,\n                    \"conditions\": \"broken clouds\",\n                    \"icon\": \"04d\"\n                },\n                {\n                    \"date\": \"2021-10-02\",\n                    \"sunrise\": \"2021-10-02T08:57:16.000-04:00\",\n                    \"sunset\": \"2021-10-02T20:40:52.000-04:00\",\n                    \"max_temp\": 72.16,\n                    \"min_temp\": 56.66,\n                    \"conditions\": \"few clouds\",\n                    \"icon\": \"02d\"\n                }\n            ],\n            \"hourly_weather\": [\n                {\n                    \"time\": \"00:00:00\",\n                    \"temperature\": 61.81,\n                    \"conditions\": \"broken clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"01:00:00\",\n                    \"temperature\": 60.58,\n                    \"conditions\": \"broken clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"02:00:00\",\n                    \"temperature\": 61.86,\n                    \"conditions\": \"broken clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"03:00:00\",\n                    \"temperature\": 62.65,\n                    \"conditions\": \"overcast clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"04:00:00\",\n                    \"temperature\": 63.19,\n                    \"conditions\": \"overcast clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"05:00:00\",\n                    \"temperature\": 64.17,\n                    \"conditions\": \"overcast clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"06:00:00\",\n                    \"temperature\": 65.52,\n                    \"conditions\": \"overcast clouds\",\n                    \"icon\": \"04n\"\n                },\n                {\n                    \"time\": \"07:00:00\",\n                    \"temperature\": 65.26,\n                    \"conditions\": \"overcast clouds\",\n                    \"icon\": \"04n\"\n                }\n            ]\n        }\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Forecast in Marco Island",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/forecast?location=marco island, fl",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"forecast"
+											],
+											"query": [
+												{
+													"key": "location",
+													"value": "marco island, fl"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forecast in Marco Island",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/forecast?location=marco island, fl",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"forecast"
+													],
+													"query": [
+														{
+															"key": "location",
+															"value": "marco island, fl"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"a199e05b2c4fb93ebdd48ed512c70b70\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "35cd4e97-97bf-46d5-b7cf-7ad73a756b37"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.758578"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"forecast\",\n        \"attributes\": {\n            \"current_weather\": {\n                \"sunrise\": \"2021-09-29T07:18:20.000-04:00\",\n                \"sunset\": \"2021-09-29T19:15:42.000-04:00\",\n                \"feels_like\": 76.24,\n                \"humidity\": 73,\n                \"uvi\": 0,\n                \"visibility\": 10000,\n                \"datetime\": \"2021-09-29T00:43:19.000-04:00\",\n                \"temperature\": 75.56,\n                \"conditions\": \"clear sky\",\n                \"icon\": \"01n\"\n            },\n            \"daily_weather\": [\n                {\n                    \"date\": \"2021-09-29\",\n                    \"sunrise\": \"2021-09-29T07:18:20.000-04:00\",\n                    \"sunset\": \"2021-09-29T19:15:42.000-04:00\",\n                    \"max_temp\": 84.04,\n                    \"min_temp\": 75.56,\n                    \"conditions\": \"few clouds\",\n                    \"icon\": \"02d\"\n                },\n                {\n                    \"date\": \"2021-09-30\",\n                    \"sunrise\": \"2021-09-30T07:18:45.000-04:00\",\n                    \"sunset\": \"2021-09-30T19:14:36.000-04:00\",\n                    \"max_temp\": 86.14,\n                    \"min_temp\": 75.87,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01d\"\n                },\n                {\n                    \"date\": \"2021-10-01\",\n                    \"sunrise\": \"2021-10-01T07:19:10.000-04:00\",\n                    \"sunset\": \"2021-10-01T19:13:31.000-04:00\",\n                    \"max_temp\": 86.92,\n                    \"min_temp\": 76.55,\n                    \"conditions\": \"light rain\",\n                    \"icon\": \"10d\"\n                },\n                {\n                    \"date\": \"2021-10-02\",\n                    \"sunrise\": \"2021-10-02T07:19:36.000-04:00\",\n                    \"sunset\": \"2021-10-02T19:12:26.000-04:00\",\n                    \"max_temp\": 87.48,\n                    \"min_temp\": 77.27,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01d\"\n                },\n                {\n                    \"date\": \"2021-10-03\",\n                    \"sunrise\": \"2021-10-03T07:20:02.000-04:00\",\n                    \"sunset\": \"2021-10-03T19:11:21.000-04:00\",\n                    \"max_temp\": 85.8,\n                    \"min_temp\": 75.4,\n                    \"conditions\": \"few clouds\",\n                    \"icon\": \"02d\"\n                }\n            ],\n            \"hourly_weather\": [\n                {\n                    \"time\": \"00:00:00\",\n                    \"temperature\": 76.01,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"01:00:00\",\n                    \"temperature\": 75.56,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"02:00:00\",\n                    \"temperature\": 75.83,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"03:00:00\",\n                    \"temperature\": 76.05,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"04:00:00\",\n                    \"temperature\": 76.12,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"05:00:00\",\n                    \"temperature\": 76.12,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"06:00:00\",\n                    \"temperature\": 75.81,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                },\n                {\n                    \"time\": \"07:00:00\",\n                    \"temperature\": 75.58,\n                    \"conditions\": \"clear sky\",\n                    \"icon\": \"01n\"\n                }\n            ]\n        }\n    }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Sad Path",
+							"item": [
+								{
+									"name": "No location params",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/forecast",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"forecast"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "No location params",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/forecast",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"forecast"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"57b9fd48ce94131863257e73d51050bd\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "f6262100-abcb-4d36-b855-3c764071542f"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.151427"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": {\n        \"error_message\": \"Invalid Entry\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Empty location params",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/forecast?location=",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"forecast"
+											],
+											"query": [
+												{
+													"key": "location",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Empty location params",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/forecast?location=",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"forecast"
+													],
+													"query": [
+														{
+															"key": "location",
+															"value": ""
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"57b9fd48ce94131863257e73d51050bd\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "5e9b655a-8d1f-4451-a5e1-1c3ef8dff187"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.193849"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": {\n        \"error_message\": \"Invalid Entry\"\n    }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "1b. Background image for the city",
+					"item": [
+						{
+							"name": "Happy Path",
+							"item": [
+								{
+									"name": "Image for Denver",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/backgrounds?location=denver,co",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"backgrounds"
+											],
+											"query": [
+												{
+													"key": "location",
+													"value": "denver,co"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/backgrounds?location=denver,co",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"backgrounds"
+													],
+													"query": [
+														{
+															"key": "location",
+															"value": "denver,co"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"6315561c647b63fc5168ebec630a4778\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "5394e8c8-fe77-46bb-aa18-11840259758c"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.428253"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"backgrounds\",\n        \"attributes\": {\n            \"location\": \"denver,co\",\n            \"image\": [\n                {\n                    \"image_url\": \"https://images.unsplash.com/photo-1619856699906-09e1f58c98b1?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyNjMyMjd8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2MzI4NzkxMzM&ixlib=rb-1.2.1&q=85\",\n                    \"credit\": {\n                        \"source\": \"unsplash.com\",\n                        \"author\": \"Ryan De Hamer\",\n                        \"author_profile\": \"https://api.unsplash.com/users/rdehamer\",\n                        \"author_image\": \"https://images.unsplash.com/profile-1577912636161-6a3ada136470image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32\"\n                    }\n                }\n            ]\n        }\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Image for Marco Island",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/backgrounds?location=marco island. fl",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"backgrounds"
+											],
+											"query": [
+												{
+													"key": "location",
+													"value": "marco island. fl"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Image for Marco Island",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/backgrounds?location=marco island. fl",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"backgrounds"
+													],
+													"query": [
+														{
+															"key": "location",
+															"value": "marco island. fl"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"2a9c3568605a402bc194576b026d1435\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "3161ce4f-d704-4d1f-a52c-417ef78146cb"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.456885"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"backgrounds\",\n        \"attributes\": {\n            \"location\": \"marco island. fl\",\n            \"image\": [\n                {\n                    \"image_url\": \"https://images.unsplash.com/photo-1628354973088-ded60ff905bb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyNjMyMjd8MHwxfHNlYXJjaHwxfHxtYXJjbyUyMGlzbGFuZC4lMjBmbHxlbnwwfHx8fDE2MzI4OTA2Nzg&ixlib=rb-1.2.1&q=85\",\n                    \"credit\": {\n                        \"source\": \"unsplash.com\",\n                        \"author\": \"Christin Wurst\",\n                        \"author_profile\": \"https://api.unsplash.com/users/christinsuzanne\",\n                        \"author_image\": \"https://images.unsplash.com/profile-1628378955521-82a44ce40b4fimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32\"\n                    }\n                }\n            ]\n        }\n    }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Sad Path",
+							"item": [
+								{
+									"name": "No location params",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/backgrounds",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"backgrounds"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "No location params",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/backgrounds",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"backgrounds"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"57b9fd48ce94131863257e73d51050bd\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "4b70f774-e468-4db4-89fc-d3ad73775e76"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.001908"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": {\n        \"error_message\": \"Invalid Entry\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Empty location params",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/v1/backgrounds?location=",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"backgrounds"
+											],
+											"query": [
+												{
+													"key": "location",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Empty location params",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:3000/api/v1/backgrounds?location=",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "3000",
+													"path": [
+														"api",
+														"v1",
+														"backgrounds"
+													],
+													"query": [
+														{
+															"key": "location",
+															"value": ""
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"d909ea447859647a927946e96fa64403\""
+												},
+												{
+													"key": "Cache-Control",
+													"value": "max-age=0, private, must-revalidate"
+												},
+												{
+													"key": "X-Request-Id",
+													"value": "1fe9ba62-18d6-4cc3-8b40-e593328c177f"
+												},
+												{
+													"key": "X-Runtime",
+													"value": "0.285114"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"backgrounds\",\n        \"attributes\": {\n            \"location\": \"\",\n            \"image\": []\n        }\n    }\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "2. User Registration",
+			"item": [
+				{
+					"name": "Happy Path",
+					"item": [
+						{
+							"name": "Successful Registration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful registration",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5f4d818ca9188d50371c35de5985f2ed\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "62eb6468-eca9-4006-b823-927cee80c489"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.274533"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": \"4\",\n        \"type\": \"users\",\n        \"attributes\": {\n            \"email\": \"example@example.com\",\n            \"api_key\": \"74bf9171a4525806074a1bb3c5634677\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Sad Path",
+					"item": [
+						{
+							"name": "Email already exists",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5f4d818ca9188d50371c35de5985f2ed\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "62eb6468-eca9-4006-b823-927cee80c489"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.274533"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": \"4\",\n        \"type\": \"users\",\n        \"attributes\": {\n            \"email\": \"example@example.com\",\n            \"api_key\": \"74bf9171a4525806074a1bb3c5634677\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Email already exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "90bbefd4-f11d-483b-83a0-45343007fbed"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.271336"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Email has already been taken.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Email bad format",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"successful\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Email bad format",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"successful\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "8ad85962-ae50-4da7-a83f-9383afa4cb22"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.268274"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Email is invalid.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Email missing",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Email missing",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "68607407-0e8f-436b-9018-60b3d945d0b3"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.292721"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Email can't be blank.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Passwords dont match",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"successful@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"not_password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Passwords dont match",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"successful@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"not_password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "741c1b5a-eab8-4150-a724-e9db19fb9292"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.262707"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Password confirmation doesn't match Password.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Password missing",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"successful@example.com\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Password missing",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"successful@example.com\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "81d4cdfe-ee4c-4188-bc3f-b95dd4b41e97"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.004410"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Password can't be blank.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Password  confirmation missing",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"newone@example.com\",\n  \"password\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Password  confirmation missing",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"newone@example.com\",\n  \"password\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "e6ed6837-2942-4ab9-89de-b83df8cb65fc"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.261006"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Password confirmation can't be blank.\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "3. Login",
+			"item": [
+				{
+					"name": "Happy Path",
+					"item": [
+						{
+							"name": "Successful login",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"whatever@example.com\",\n  \"password\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"whatever@example.com\",\n  \"password\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/sessions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"sessions"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"676c8cb9509270346894566ad56a7d1e\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "866021bf-0960-45a8-b186-2a41670886c5"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.266625"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": \"2\",\n        \"type\": \"users\",\n        \"attributes\": {\n            \"email\": \"whatever@example.com\",\n            \"api_key\": \"93809d3ca617877eade04586dbeedd7c\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Sad Path",
+					"item": [
+						{
+							"name": "Missing both fields",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Missing both fields",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/sessions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"sessions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "1fb5188b-4811-424f-950c-68ec3b34771c"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.056441"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Unable to log in. Please try again.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Missing password",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"whatever@example.com\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Missing password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"whatever@example.com\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/sessions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"sessions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "1dfd4db0-a24d-4e12-bcc4-b41af34b4c55"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.272687"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Unable to log in. Please try again.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Missing email",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Missing email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"password\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/sessions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"sessions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "0fd645c6-b694-4e21-b44a-406eead74488"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.001972"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Unable to log in. Please try again.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Unregistered email",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"notregistered@badexample.com\",\n    \"password\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unregistered email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"notregistered@badexample.com\",\n    \"password\": \"password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/sessions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"sessions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "b70b57c9-3ee3-4652-94eb-19f6c806eb4d"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.001988"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Unable to log in. Please try again.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Wrong password",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"whatever@example.com\",\n    \"password\": \"wrong_password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/sessions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Wrong password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"whatever@example.com\",\n    \"password\": \"wrong_password\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/sessions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"sessions"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "b323b033-304d-4d21-aff1-e5a069051037"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.266809"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Unable to log in. Please try again.\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "4. Road Trip",
+			"item": [
+				{
+					"name": "Happy Path",
+					"item": [
+						{
+							"name": "Drive time less than 1 hour",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"kennebunk, me\",\n    \"destination\": \"kennebunkport, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Drive time less than 1 hour",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"kennebunk, me\",\n    \"destination\": \"kennebunkport, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"99d6a4727fe3158d5a02bfbfacc25f56\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "eb126b6e-a6f3-4953-8d9c-67ae43d716e3"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "1.021766"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"kennebunk, me\",\n            \"end_city\": \"kennebunkport, me\",\n            \"travel_time\": \"00 hours, 08 minutes\",\n            \"weather_at_eta\": {\n                \"temperature\": 54.79,\n                \"conditions\": \"overcast clouds\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Drive time less than 48 hours",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"kennebunk, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Drive time less than 48 hours",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"kennebunk, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"9ad55cd3770aad3aa8631d11bfab8e10\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "affb216c-1b8b-40ae-b9b2-d3904d67ba0f"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "1.546648"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"marco island, fl\",\n            \"end_city\": \"kennebunk, me\",\n            \"travel_time\": \"25 hours, 10 minutes\",\n            \"weather_at_eta\": {\n                \"temperature\": 51.78,\n                \"conditions\": \"overcast clouds\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "72 hours > drivetime > 48 hours",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"vancouver, ca\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "72 hours > drivetime > 48 hours",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"vancouver, ca\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"646e60a9d639d45f6230b5d33319c99b\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "bd9de6ea-7f72-4065-b432-00713d138537"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "1.921377"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"marco island, fl\",\n            \"end_city\": \"vancouver, ca\",\n            \"travel_time\": \"49 hours, 32 minutes\",\n            \"weather_at_eta\": {\n                \"temperature\": 55.92,\n                \"conditions\": \"broken clouds\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "96 hours > drivetime > 72 hours Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"fairbanks, ak\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "96 hours > drivetime > 72 hours Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"fairbanks, ak\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3b13e38328e006cdaab05a68995fe2b0\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "68684e2a-b665-4113-9b0e-cfb01d7f6ab8"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "1.814832"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"marco island, fl\",\n            \"end_city\": \"fairbanks, ak\",\n            \"travel_time\": \"77 hours, 01 minutes\",\n            \"weather_at_eta\": {\n                \"temperature\": 33.58,\n                \"conditions\": \"overcast clouds\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "120 hours > drivetime > 96 hours Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"fort ware, bc\",\n    \"destination\": \"panama\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "120 hours > drivetime > 96 hours Copy 2",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"fort ware, bc\",\n    \"destination\": \"panama\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"77b86fbc59297e2f0876ecd6b042ba14\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "370404a4-2cd2-4e3f-8f9b-6cbdba915373"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "6.025050"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"fort ware, bc\",\n            \"end_city\": \"panama\",\n            \"travel_time\": \"112 hours, 59 minutes\",\n            \"weather_at_eta\": {\n                \"temperature\": 82.02,\n                \"conditions\": \"moderate rain\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "drivetime > 120 hours",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"fairbanks, AK\",\n    \"destination\": \"panama\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "drivetime > 120 hours",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"fairbanks, AK\",\n    \"destination\": \"panama\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4b1cb554076f47f6de58a046ac5def92\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "90783183-c7dd-47ad-a6a6-185651df0f0b"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "2.796385"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"fairbanks, AK\",\n            \"end_city\": \"panama\",\n            \"travel_time\": \"121 hours, 47 minutes\",\n            \"weather_at_eta\": {}\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "impossible route",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"fairbanks, AK\",\n    \"destination\": \"taiwan\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "impossible route",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"fairbanks, AK\",\n    \"destination\": \"taiwan\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"aa61cb827ba4afa0aeed619de1b5aea3\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "cf96b2b8-ee6c-439d-ad84-5175e75ed562"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.921906"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": null,\n        \"type\": \"road_trip\",\n        \"attributes\": {\n            \"start_city\": \"fairbanks, AK\",\n            \"end_city\": \"taiwan\",\n            \"travel_time\": \"impossible route\",\n            \"weather_at_eta\": {}\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Sad Path",
+					"item": [
+						{
+							"name": "Origin not provided",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"destination\": \"kennebunkport, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Origin not provided",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"destination\": \"kennebunkport, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "eaeb200d-7769-4ffd-a89b-3fae1ff049e9"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.004183"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Must have both origin and destination query params\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Destination not provided",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"kennebunk, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Destination not provided",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"kennebunk, me\",\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "413d2227-8beb-4f61-8da9-ab16a727c64b"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.003947"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Must have both origin and destination query params\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Origin & destination not provided",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Origin & destination not provided",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"api_key\": \"82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "2a2a8fa8-67f7-4a0a-ba01-2c8ce53b60e7"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.003476"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Must have both origin and destination query params\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Bad API key",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"kennebunkport, me\",\n    \"api_key\": \"wrong\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Bad API key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"kennebunkport, me\",\n    \"api_key\": \"wrong\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "87b00b42-7a88-4463-b27f-d140783bb7c1"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.004578"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Invalid API key\"\n}"
+								}
+							]
+						},
+						{
+							"name": "No API key",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"kennebunkport, me\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/road_trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"road_trip"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "NYC",
+											"disabled": true
+										},
+										{
+											"key": "destination",
+											"value": "ketchikan, AK",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No API key",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"origin\": \"marco island, fl\",\n    \"destination\": \"kennebunkport, me\"\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/road_trip",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"road_trip"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "NYC",
+													"disabled": true
+												},
+												{
+													"key": "destination",
+													"value": "ketchikan, AK",
+													"disabled": true
+												},
+												{
+													"key": "api_key",
+													"value": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "f7071240-af5f-4243-a131-5a7e806e3667"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.002818"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Invalid API key\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
