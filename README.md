@@ -10,6 +10,8 @@
 
 ##### A ReSTful, JSON 1.0 compliant API to retrieve forecast and images by location, and make authenticated requests for a road trip's weather forecast
 
+<a href="https://road-trip-weather-api.herokuapp.com/api/v1/forecast?location=kennebunk"><img src="https://user-images.githubusercontent.com/74567704/135339387-16a9c03c-beab-4d9c-885d-6612b5869230.png" /></a>
+
 
 
 
