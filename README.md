@@ -226,7 +226,7 @@ GET http://localhost:3000/api/v1/forecast?location=denver,co
 Status: 200 OK
 ```
 
-```
+```json
 {
   "data": {
     "id": null,
@@ -358,7 +358,7 @@ GET http://localhost:3000/api/v1/forecast?location=
 Status: 400 Bad Request
 ```
 
-```
+```json
 {
   "message": "your query could not be completed",
   "errors": [
@@ -379,7 +379,7 @@ GET http://localhost:3000/api/v1/forecast
 Status: 400 Bad Request
 ```
 
-```
+```json
 {
   "message": "your query could not be completed",
   "errors": [
@@ -416,7 +416,7 @@ GET http://localhost:3000/api/v1/backgrounds?location=denver,co
 Status: 200 OK
 ```
 
-```
+```json
 {
   "data": {
     "id": null,
@@ -448,7 +448,7 @@ GET http://localhost:3000/api/v1/backgrounds?location=
 Status: 400 Bad Request
 ```
 
-```
+```json
 {
   "message": "your query could not be completed",
   "errors": [
@@ -469,7 +469,7 @@ GET http://localhost:3000/api/v1/backgrounds
 Status: 400 Bad Request
 ```
 
-```
+```json
 {
   "message": "your query could not be completed",
   "errors": [
@@ -514,7 +514,7 @@ POST http://localhost:3000/ap1/v1/users
 
 With the following request body:
 
-```
+```json
 {
   "email": "whatever@example.com",
   "password": "password",
@@ -528,7 +528,7 @@ With the following request body:
 Status: 201 Created
 ```
 
-```
+```json
 {
   "data": {
     "id": "4",
@@ -547,7 +547,7 @@ Status: 201 Created
 Status: 422 Unprocessable Entity
 ```
 
-```
+```json
 {
   "message": "your record could not be saved",
   "errors": [
@@ -562,7 +562,7 @@ Status: 422 Unprocessable Entity
 Status: 422 Unprocessable Entity
 ```
 
-```
+```json
 {
   "message": "your record could not be saved",
   "errors": [
@@ -577,7 +577,7 @@ Status: 422 Unprocessable Entity
 Status: 422 Unprocessable Entity
 ```
 
-```
+```json
 {
   "message": "your record could not be saved",
   "errors": [
@@ -612,7 +612,7 @@ POST http://localhost:3000/ap1/v1/sessions
 
 With the following request body:
 
-```
+```json
 {
   "email": "whatever@example.com",
   "password": "password"
@@ -625,7 +625,7 @@ With the following request body:
 Status: 201 Created
 ```
 
-```
+```json
 {
   "data": {
     "id": "4",
@@ -644,7 +644,7 @@ Status: 201 Created
 Status: 401 Unauthorized
 ```
 
-```
+```json
 {
   "error":  "Unable to log in. Please try again."
 }
@@ -683,7 +683,7 @@ POST http://localhost:3000/ap1/v1/road_trip
 
 With the following request body:
 
-```
+```json
 {
   "origin": "Marco Island, FL",
   "destination": "Kennebunk, ME"
@@ -697,7 +697,7 @@ With the following request body:
 Status: 201 Created
 ```
 
-```
+```json
 {
   "data": {
     "id": null,
@@ -723,7 +723,7 @@ POST http://localhost:3000/ap1/v1/road_trip
 
 With the following request body:
 
-```
+```json
 {
   "origin": "Kennebunk, ME",
   "destination": "Taiwan",
@@ -737,7 +737,7 @@ With the following request body:
 Status: 201 Created
 ```
 
-```
+```json
 {
   "data": {
     "id": null,
@@ -760,7 +760,7 @@ POST http://localhost:3000/ap1/v1/road_trip
 
 With the following request body:
 
-```
+```json
 {
   "origin": "Marco Island, FL",
   "destination": "Kennebunk, ME"
@@ -773,7 +773,7 @@ With the following request body:
 Status: 401 Unauthorized
 ```
 
-```
+```json
 {
   "message": "your query could not be completed",
   "errors": [
@@ -790,7 +790,7 @@ POST http://localhost:3000/ap1/v1/road_trip
 
 With the following request body:
 
-```
+```json
 {
   "origin": "Marco Island, FL",
   "api_key": "82caf75f-b1cc-4fb6-b3b3-ceb3de6ca61e"
@@ -803,7 +803,7 @@ With the following request body:
 Status: 400 Bad Request
 ```
 
-```
+```json
 {
   "error": "Must have both origin and destination query params"
 }
